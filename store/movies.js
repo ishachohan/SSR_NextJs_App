@@ -52,8 +52,7 @@ export const searchMovies = (name) => (dispatch) => {
     );
 };
 
-export const filterbygenres = (genretype, sortby)  => {
-    
+export const filterbygenres = (genretype, sortby) => (dispatch)  => {
     var urlstring = "/movies?filter=" + genretype + "&limit=6&sortOrder=desc&sortBy=";
     switch (sortby){
         case "Release Date":
@@ -66,7 +65,7 @@ export const filterbygenres = (genretype, sortby)  => {
             urlstring = urlstring + "releasedate";
     }
     console.log(urlstring)
-    return (      
+    return dispatch(      
         apiCallBegan({           
             url:urlstring,
             onStart: postsRequested.type,

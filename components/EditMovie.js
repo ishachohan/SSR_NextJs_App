@@ -1,16 +1,21 @@
 import React,  { useState } from "react";
 import { Button, Modal} from 'react-bootstrap';
-import "../styles/AddMovie.module.css"
+import styles from "../styles/AddMovie.module.css"
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
 import TextField from '@material-ui/core/TextField';
 import { useFormik } from "formik";
-
+import homestyles from "../styles/Home.module.css"
 
 function AddMovie(){
     
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true); 
+
+    const listClasses = [styles.backstlyes , styles.fontstyles2].join(" ");
+    const listClasses1 = [styles.backstlyes2 , styles.fontstyles2].join(" ");
+    const listClasses2 = [styles.backstlyes3 ,styles.fontstyles2].join(" ")
+
 
     var MockData={
         Movie : "Moana",
@@ -78,65 +83,65 @@ function AddMovie(){
     return (
             <React.Fragment>
                   
-                    <input type="button" onClick={handleShow} className="editmoviesbtn" value="+EDIT MOVIES" />              
+                    <input type="button" onClick={handleShow} className={homestyles.editmoviesbtn} value="+EDIT MOVIES" />              
                     <Modal show={show} onHide={handleClose} dialogClassName="modal-content">
                             
-                        <Modal.Header className="headerbackstyle" closeButton>
+                        <Modal.Header className={styles.headerbackstyle} closeButton>
                             <Modal.Title>EDIT MOVIE</Modal.Title>
                         </Modal.Header>
 
-                        <Modal.Body className="addmovieModalbox">
+                        <Modal.Body className={styles.addmovieModalbox}>
                             <div className="container">
                                 <div className="left">
-                                    <label className="fontstyles"  htmlFor="title">TITLE</label>
-                                    <input type="text" className="backstlyes" name="title" id="title"
+                                    <label className={styles.fontstyles}  htmlFor="title">TITLE</label>
+                                    <input type="text" className={styles.backstlyes} name="title" id="title"
                                         value={formik.values.title} onChange={formik.handleChange} placeholder="TITLE" />
-                                    {formik.errors.title? <div className="fontstyles2">{formik.errors.title}</div> : null}
+                                    {formik.errors.title? <div className={styles.fontstyles2}>{formik.errors.title}</div> : null}
                                     
-                                    <label className="fontstyles" htmlFor="movieurl">MOVIE URL</label>
-                                    <input type="text" className="backstlyes fontstyles2" id="movieurl" name="movieurl"
+                                    <label className={styles.fontstyles} htmlFor="movieurl">MOVIE URL</label>
+                                    <input type="text" className={listClasses} id="movieurl" name="movieurl"
                                         placeholder="https://" value={formik.values.movieurl} 
                                         onChange={formik.handleChange}/>
-                                    {formik.errors.movieurl ? <div className="fontstyles2">{formik.errors.movieurl}</div> : null}
+                                    {formik.errors.movieurl ? <div className={styles.fontstyles2}>{formik.errors.movieurl}</div> : null}
 
-                                    <label className="fontstyles" htmlFor="genres">GENRE</label>
+                                    <label className={styles.fontstyles} htmlFor="genres">GENRE</label>
                                     <ReactMultiSelectCheckboxes options = {data} className="MultiSelectstyle"
                                     id="genres" name="genres"/>
                                 
                                 </div>
                                 <div className="right">
-                                    <label className="fontstyles" htmlFor="releasedate">RELEASE DATE</label>
-                                    <TextField id="releasedate" type="date" defaultValue={MockData.Date} className="backstlyes2"
+                                    <label className={styles.fontstyles} htmlFor="releasedate">RELEASE DATE</label>
+                                    <TextField id="releasedate" type="date" defaultValue={MockData.Date} className={styles.backstlyes2}
                                             InputProps={{color: "white"}} name="releasedate"
                                             InputLabelProps={{ shrink: true}}/>
-                                    {formik.errors.releasedate ? <div className="fontstyles2">{formik.errors.releasedate}</div> : null}
+                                    {formik.errors.releasedate ? <div className={styles.fontstyles2}>{formik.errors.releasedate}</div> : null}
                                 
-                                    <label className="fontstyles" htmlFor="rating">RATING</label>
-                                    <input type="text" className="backstlyes2 fontstyles2" id="rating" name="rating"
+                                    <label className={styles.fontstyles} htmlFor="rating">RATING</label>
+                                    <input type="text" className={listClasses1} id="rating" name="rating"
                                         value={formik.values.rating} onChange={formik.handleChange}/>
-                                    {formik.errors.rating ? <div className="fontstyles2">{formik.errors.rating}</div> : null}
+                                    {formik.errors.rating ? <div className={styles.fontstyles2}>{formik.errors.rating}</div> : null}
 
-                                    <label className="fontstyles" htmlFor="runtime">RUNTIME</label>
-                                    <input type="number" placeholder="minutes" className="backstlyes2 fontstyles2"
+                                    <label className={styles.fontstyles} htmlFor="runtime">RUNTIME</label>
+                                    <input type="number" placeholder="minutes" className={listClasses1}
                                         id="runtime" name="runtime"
                                         value={formik.values.runtime} onChange={formik.handleChange}/>
-                                    {formik.errors.runtime ? <div className="fontstyles2">{formik.errors.runtime}</div> : null}
+                                    {formik.errors.runtime ? <div className={styles.fontstyles2}>{formik.errors.runtime}</div> : null}
                                 </div>
                             </div>
                                 <div>
-                                    <label className="fontstyles2" htmlFor="overview">OVERVIEW</label>
-                                    <textarea className="backstlyes3" 
+                                    <label className={styles.fontstyles2} htmlFor="overview">OVERVIEW</label>
+                                    <textarea className={styles.backstlyes3} 
                                         placeholder="Movie description" name="overview" id="overview"
                                         rows={40} cols={100} 
                                         onChange = {formik.handleChange}
                                         value={formik.values.overview}
                                         >
-                                    {formik.errors.overview ? <div className="fontstyles2">{formik.errors.overview}</div> : null}           
+                                    {formik.errors.overview ? <div className={styles.fontstyles2}>{formik.errors.overview}</div> : null}           
                                     </textarea>   
                                 </div>
                         </Modal.Body>
                         
-                        <Modal.Footer className="headerbackstyle">
+                        <Modal.Footer className={styles.headerbackstyle}>
                         <Button variant="custom" onClick={handleClose} >
                             RESET
                         </Button>

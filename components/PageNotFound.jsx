@@ -19,10 +19,7 @@ text-align: center !important
 const PageNotFound = () => {
     console.log("inside page not found")
     return(
-
             <MsgText>Page Not Found</MsgText>
-
-
     )
 }
 export default PageNotFound;

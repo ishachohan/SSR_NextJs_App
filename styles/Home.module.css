@@ -327,8 +327,10 @@
 
 .moviediv{
     position: absolute;
+    display: flex !important;
     left: 10px;
-    top: 600px;
+    top: 600px; 
+    flex-wrap: wrap;
 }
 .movietiles{
     display: flex;
@@ -338,8 +340,8 @@
 }
 .movietilestyle{
     width : 33.333%;
-    min-width: 300px;
-    padding: 15px;
+    min-width: 250px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     cursor: pointer;

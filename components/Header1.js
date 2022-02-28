@@ -1,19 +1,23 @@
 import React, { useState } from "react";
-import "../styles/Home.module.css"
+import styles from "../styles/Home.module.css"
 import Movietile from "./Movietile";
 import SearchMovie from "./SearchMovie";
 import MovieDetails from "./MovieDetails";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 import { filterbygenres } from "../store/movies";
-import { useDispatch } from "react-redux";
-import { Link  } from "next/Link";
+import Link  from "next/Link";
 import { useRouter } from 'next/router'
+import { connect } from "react-redux"
+import { useDispatch } from "react-redux";
 
 const Header1 = (props) => {
-    let navigate = useRouter ();
+
+    const { query } = useRouter();
     const [MovieSelect, SetMovieSelect] = useState({});
     const [flag, setflag] = useState(false);
     var movieList = props.movies;
+
+    const listClasses14 = ["row",styles.moviediv].join(" ")
 
     const [value,setValue]=useState('Release Date');
     
@@ -21,7 +25,7 @@ const Header1 = (props) => {
         setValue(e)
         if(e === "Release Date")
             e="releasedate"
-        navigate(`?sortBy=${e}`);
+        //navigate(`?sortBy=${e}`);
       }
 
     const dispatch = useDispatch();
@@ -43,25 +47,33 @@ const Header1 = (props) => {
             {flag === false && <SearchMovie/>}
             {flag === true && <MovieDetails movie={MovieSelect}/> }
            
-            <div className="rectangle9"></div> 
-            <Link className="all" to="?genre=all" onClick={() => dispatch(filterbygenres("",value))}>ALL</Link>
-            <Link className="Documentary" to="?genre=documentary" onClick={() => dispatch(filterbygenres("documentary",value))}>DOCUMENTARY</Link>
-            <Link className="Comedy" to="?genre=comedy" onClick={() => dispatch(filterbygenres("comedy",value))}>COMEDY</Link>
-            <Link className="Horror" to="?genre=horror" onClick={() => dispatch(filterbygenres("horror",value))}>HORROR</Link>
-            <Link className="Crime"to="?genre=crime" onClick={() => dispatch(filterbygenres("crime",value))}>CRIME</Link>
+            <div className={styles.rectangle9}></div> 
+            <Link href="/search/?all" >
+                <a className={styles.all} onClick={() => dispatch(filterbygenres(" ",value))}>ALL</a>       
+            </Link>
+            <Link href="/search/?genre=documentary"  >
+                <a className={styles.Documentary} onClick={() => dispatch(filterbygenres("documentary",value))}>DOCUMENTARY</a>       
+            </Link>
+            <Link  href="/search/?genre=comedy">
+                <a className={styles.Comedy}  onClick={() => dispatch(filterbygenres("comedy",value))}>COMEDY</a>
+            </Link>
+            <Link  href="/search/?genre=horror">
+                <a className={styles.Horror} onClick={() => dispatch(filterbygenres("horror",value))}>HORROR</a> 
+            </Link>
+            <Link  href="/search/?genre=crime">
+                <a className={styles.Crime} onClick={() => dispatch(filterbygenres("crime",value))}>CRIME</a>
+            </Link>
             
-            <label className="moviesfound">39 movies found</label>  
-            <label className="Sortby">Sort by</label>
+            <label className={styles.moviesfound}>39 movies found</label>  
+            <label className={styles.Sortby}>Sort by</label>
 
             <DropdownButton id="Iddropdown" title={value} variant="secondary"
-                            className="Releasedate"  onSelect={handleSelect}>
-               
+                            className={styles.Releasedate}  onSelect={handleSelect}>
                <Dropdown.Item eventKey="Release Date">Release Date</Dropdown.Item> 
-               
                 <Dropdown.Item eventKey="Ratings">Ratings</Dropdown.Item>
             </DropdownButton>
 
-            <div className="row moviediv" onClick={flagHandler}>
+            <div className={listClasses14} onClick={flagHandler}>
                     {movieList?.length ? (
                         movieList.map((movie) => (
                         <Movietile
@@ -78,4 +90,12 @@ const Header1 = (props) => {
 
     )   
 }
-export default Header1
+const mapStateToProps = state => {
+    return { moviesList : state.list }
+   }
+   
+   const mapDispatchToProps = {
+    filterbygenres
+   }
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Header1)

@@ -1,8 +1,6 @@
 import '../styles/App.module.css';
 import ErrorBoundary from './ErrorBoundary';
-
 import Homepage from './Home';
-
 
 function Mainappstart() {
   return (
@@ -15,4 +13,6 @@ function Mainappstart() {
   </div>
   );
 }
+
+
 export default Mainappstart;

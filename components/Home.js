@@ -1,24 +1,17 @@
 import React, { useEffect } from "react";
-import "../styles/Home.module.css"
+import styles from "../styles/Home.module.css"
 import ErrorBoundary from "./ErrorBoundary";
 import Header1 from "./Header1";
-import { useDispatch, useSelector } from "react-redux";
-import  loadMovies  from '../store/configureStore'
 
-function Homepage () {
-    const dispatch = useDispatch();
-    const moviesList = useSelector((state) => state.list);
 
-    useEffect(() => {
-        dispatch(loadMovies());
-    }, [dispatch]);
-
+function Homepage (props) {
         return(
-            <div className="Header">
+            <div className={styles.Header}>
                 <ErrorBoundary>
-                    <Header1 movies={moviesList.data}/>
+                 <Header1 movies={props.movies.moviesList}/>
                 </ErrorBoundary>
             </div>
         );
 }
-export default Homepage
+   
+export default Homepage;
