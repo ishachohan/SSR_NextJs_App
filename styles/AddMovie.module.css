@@ -1,0 +1,226 @@
+.modal-content {
+    Width : 900px;
+    Height : 200px;
+    max-width: 950px !important;
+    border:none !important
+  }
+  
+.addmovieModalbox{
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    backdrop-filter: blur(8px) ;
+    background-color: #232323;
+    border:none !important
+    /* box-shadow: 5px 10px 18px #232323;      */
+}
+.headerbackstyle{
+    backdrop-filter: blur(8px) ;
+    background-color: #232323;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    border:none !important;
+    color: #FFFFFF;
+
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.left {
+    width: calc(60% - (.5em + 6px));
+    float: left;
+    min-height: 280px;
+    margin-top: 1em;
+  }
+  
+  .right {
+    width: calc(40% - (.5em + 6px));
+    float: right;
+    min-height: 280px;
+    margin-top: 1em;
+  }
+  .fontstyles{
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;   
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+    
+    color: #F65261;
+    
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  }
+
+  .fontstyles2{
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;   
+    letter-spacing: 0.888889px;
+  
+    
+    color: #FFFFFF;
+    
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  }
+
+  .backstlyes{
+    background: rgba(50, 50, 50, 0.948044);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    border-radius: 4px;
+    width:500px ;
+    Height:50px;
+    color: #FFFFFF;
+  }
+
+  .backstlyesmulti{
+    background: rgba(50, 50, 50, 0.948044);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    border-radius: 4px;
+    width:500px ;
+    Height:50px
+  }
+
+  .backstlyes2{
+    background: rgba(50, 50, 50, 0.948044);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    border-radius: 4px;
+    width:320px ;
+    Height:50px;
+    color: #FFFFFF !important;
+  }
+
+  .backstlyes3{
+    background: rgba(50, 50, 50, 0.948044);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    border-radius: 4px;
+    width:890px ;
+    Height:100px;
+    color: #FFFFFF;
+  }
+
+  .backstlyes.text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px; 
+    color: #FFFFFF;
+  }
+
+  .btn-custom{
+    border: 1.5px solid #F65261 !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #F65261 !important;
+  }
+
+  .btn-customsubmit{
+    background: #F65261 !important;
+    border-radius: 4px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase ;
+
+    color: #FFFFFF !important;
+  }
+
+  .path2{
+    position: absolute;
+    left: 94.79%;
+    right: 5.11%;
+    top: 3.44%;
+    bottom: 93.47%;
+    
+    border: 2px solid #FFFFFF;
+    transform: rotate(-45deg);
+}
+.MultiSelectstyle{
+    background-color: rgba(50, 50, 50, 0.948044) !important;
+    color:rgba(50, 50, 50, 0.948044) !important;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    border-radius: 4px;
+    width:500px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+
+    color: #FFFFFF !important
+}
+.css-1r4vtzz{
+  background-color: rgba(50, 50, 50, 0.948044) !important;
+  color:rgba(50, 50, 50, 0.948044) !important;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  border-radius: 4px;
+  width:500px !important;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+
+  color: #FFFFFF !important
+}
+.css-48ayfv{
+  background-color: rgba(50, 50, 50, 0.948044) !important;
+  color:rgba(50, 50, 50, 0.948044) !important;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  border-radius: 4px;
+  width:500px !important;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+
+  color: #FFFFFF !important
+}
+
+
+.MuiInputBase-input {
+  color: #FFFFFF !important
+}
+
+
+

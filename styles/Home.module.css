@@ -1,116 +1,383 @@
-.container {
-  padding: 0 2rem;
+.Header {
+    position: absolute;
+    width: 1200px;
+    height: 396px;
+    left: 58px;
+    top: 54px;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.labelFindText{
+    position: absolute;
+    width: 392px;
+    height: 49px;
+    left: 10px;
+    top: 155px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.SearchInput{
+    position: absolute;
+    width: 713px;
+    height: 57px;
+    left: 10px;
+    top: 242px;
+    
+    background: rgba(50, 50, 50, 0.8);
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    border-radius: 4px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.SearchBtn{
+    position: absolute;
+    width: 233px;
+    height: 57px;
+    left: 760px;
+    top: 242px;
+
+    background: #F65261;
+    color: #FFFFFF;
+    border-radius: 4px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.rectangel1{
+    position: absolute;
+    width: 1200px;
+    height: 396px;
+    left: 58px;
+    top: 54px;
+
+    background: linear-gradient(0deg, #000000, #000000);
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.bitmapimageback{
+    position: absolute;
+    width: 1200px;
+    height: 500px;
+    left: -60px;
+    top: -48px;
+    
+    background-image: url(./Bitmap.png),url(./Bitmap.png);
+    background-blend-mode: overlay;
+    opacity: 0.3;
+    
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.addmoviesbtn{
+    position: absolute;
+    width: 177px;
+    height: 46px;
+    left: 580px;
+    top: 74px;
+    color: #F65261;
+    
+    background-color: rgba(96, 96, 96, 0.68);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+
+    background-blend-mode: lighten;
+
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.deletemoviesbtn{
+    position: absolute;
+    width: 177px;
+    height: 46px;
+    left: 960px;
+    top: 74px;
+    color: #F65261;
+    
+    background-color: rgba(96, 96, 96, 0.68);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+
+    background-blend-mode: lighten;
+
 }
 
-.title,
-.description {
-  text-align: center;
+.editmoviesbtn{
+    position: absolute;
+    width: 177px;
+    height: 46px;
+    left: 772px;
+    top: 74px;
+    color: #F65261;
+    
+    background-color: rgba(96, 96, 96, 0.68);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+
+    background-blend-mode: lighten;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+
+
+/* 39 movies found */
+
+.moviesfound{
+    position: absolute;
+    width: 166px;
+    height: 24px;
+    left: 5px;
+    top: 547px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+}
+.rectangle9{
+    position: absolute;
+    width: 1202px;
+    height: 10px;
+    left: -59px;
+    top: 450px;
+
+    background: #888888;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.Sortby{
+    position: absolute;
+    width: 76px;
+    height: 20px;
+    left: 850px;
+    top: 480px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.6;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.Releasedate{
+   
+    position: absolute;
+    height: 20px;
+    width:140px;
+    left: 950px;
+    top: 480px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FFFFFF; 
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+
+.all{
+    position: absolute;
+    width: 31px;
+    height: 20px;
+    left: 5px;
+    top: 480px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+.Documentary{
+    position: absolute;
+    width: 133px;
+    height: 20px;
+    left: 50px;
+    top: 480px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+
+    cursor: pointer;
+
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.Comedy{
+    position: absolute;
+    width: 74px;
+    height: 20px;
+    left: 190px;
+    top: 480px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.Horror{
+    position: absolute;
+    width: 75px;
+    height: 20px;
+    left: 280px;
+    top: 480px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.Crime{
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    left: 370px;
+    top: 480px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.moviediv{
+    position: absolute;
+    left: 10px;
+    top: 600px;
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.movietiles{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    width : 25%;
 }
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+.movietilestyle{
+    width : 33.333%;
+    min-width: 300px;
+    padding: 15px;
+    display: flex;
     flex-direction: column;
-  }
+    cursor: pointer;
+}
+
+.movietiles .movietilestyle img{
+    display: block;
+    width: 90%;
+}
+.rectangle8{
+    Width : 100px;
+    Height : 18px;
+    opacity: 0.5;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+}
+.movietiles {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 50;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.7;
+}
+
+.movietilestyle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 50;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.7;
 }
